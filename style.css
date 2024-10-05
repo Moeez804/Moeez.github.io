@@ -1,30 +1,141 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #343a40, #212529); /* Gradient for header */
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    opacity: 0.9;
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #00ff00; /* Highlight on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0; /* Increased padding for spacing */
 }
 
 h2 {
-    color: #007bff;
-    margin-top: 40px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
 }
 
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #00ff00; /* Accent color */
+    margin: 10px auto; /* Center the line */
+}
+
+/* About Section */
+#about p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Project Cards */
 .card {
-    transition: transform 0.2s;
+    border: none; /* Remove default border */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
-footer {
-    background-color: #343a40;
-}
-
-ul {
-    list-style-type: none;
+/* Skills Section */
+#skills ul {
+    list-style: none; /* Remove bullet points */
     padding: 0;
 }
 
-ul li {
-    padding: 8px 0;
+#skills li {
+    background: #e9ecef; /* Light background for skills */
+    margin: 10px 0; /* Margin for spacing */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Contact Form */
+.form-label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #00ff00; /* Green border on focus */
+}
+
+/* Testimonials */
+blockquote {
+    font-size: 1.25rem;
+    color: #555; /* Darker color for quotes */
+    border-left: 4px solid #00ff00; /* Green left border */
+    padding-left: 20px; /* Padding for text */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark footer */
+    color: white;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding on mobile */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+
+    h2 {
+        font-size: 1.75rem; /* Smaller font size for subheadings */
+    }
+
+    #projects .card {
+        margin-bottom: 20px; /* Spacing adjustments for smaller screens */
+    }
 }
