@@ -10,11 +10,27 @@ body {
     color: #333;
 }
 
+/* Add this in your style.css */
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #0056b3;
+}
+
 
 .container {
     width: 90%;
