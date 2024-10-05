@@ -1,26 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    transition: background-color 0.3s ease; /* Background transition */
+    transition: background-color 0.3s ease;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 nav {
     background: #444;
-    transition: background 0.3s ease; /* Navigation background transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -31,144 +36,53 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; /* Link color transition */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00ff00; /* Change color on hover */
+    color: #00ff00;
 }
 
 section {
-    padding: 20px;
+    padding: 40px;
     margin: 10px 0;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Initial state for fade-in */
-    transform: translateY(20px); /* Initial state for animation */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Fade-in effect */
-}
-
-.fade-in {
-    opacity: 1; /* Visible state */
-    transform: translateY(0); /* Move to original position */
 }
 
 .project {
     margin: 20px 0;
-    transition: transform 0.3s ease; /* Animation for hover effect */
+    transition: transform 0.3s;
 }
 
 .project:hover {
-    transform: scale(1.02); /* Slightly enlarge project on hover */
+    transform: scale(1.05);
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
     background: #333;
     color: #fff;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; /* Image animation on hover */
-}
-
-img:hover {
-    transform: scale(1.05); /* Zoom image on hover */
-}
-
-/* Mobile Navigation */
-.toggle-button {
-    display: none; /* Hide button by default */
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
-}
-
-nav.active {
-    display: block; /* Show the navigation when active */
-}
-
-nav ul {
-    display: none; /* Hide menu on mobile */
-    flex-direction: column; /* Stack menu items */
-    padding: 0; /* Remove default padding */
-    transition: all 0.3s ease; /* Smooth transition for display */
-}
-
-nav.active ul {
-    display: flex; /* Show menu when active */
-    opacity: 1; /* Set opacity to 1 when shown */
-    visibility: visible; /* Make it visible */
-}
-
-nav ul {
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Make it not visible */
-}
-
-nav.active ul {
-    opacity: 1; /* Set opacity to 1 when shown */
-    visibility: visible; /* Make it visible */
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide menu on mobile */
-        flex-direction: column; /* Stack menu items */
-    }
-
-    nav.active ul {
-        display: flex; /* Show menu when active */
-    }
-
-    .toggle-button {
-        display: block; /* Show the toggle button on mobile */
-    }
-    
-    nav {
-        text-align: center; /* Center navigation items */
-    }
-}
-
-/* Modal Styles */
+/* Modal styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    transition: transform 0.3s ease; /* Transition for modal */
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    width: 80%;
 }
