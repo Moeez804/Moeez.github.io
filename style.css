@@ -1,16 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
 }
 
-/* Add this in your style.css */
 header {
     background-color: #f8f9fa;
     padding: 1rem;
@@ -27,105 +19,24 @@ nav a {
     color: #007bff;
     font-weight: bold;
 }
+
 nav a:hover {
     color: #0056b3;
 }
 
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-}
-
-.projects {
-    padding: 50px 0;
-    background: #ffffff;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.project-item:hover {
-    transform: scale(1.05);
-}
-
-.project-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.button {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background: #35424a;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.skills, .contact {
-    padding: 50px 0;
-    background: #f9f9f9;
+section {
+    padding: 20px 0;
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #35424a;
-    color: #ffffff;
+    padding: 10px;
+    background-color: #f8f9fa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
+.progress {
+    height: 20px;
 }
-/* Add this in your style.css */
-html {
-    scroll-behavior: smooth;
-}
-
