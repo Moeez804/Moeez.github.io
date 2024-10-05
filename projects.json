@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Secure File Sharing System",
+        "description": "A project that allows secure file sharing with encryption and time-limited access.",
+        "link": "https://github.com/moeez804/secure-file-sharing"
+    },
+    {
+        "title": "Hospital Patient Management System",
+        "description": "An application for managing patient records and appointments in a hospital.",
+        "link": "https://github.com/moeez804/hospital-management"
+    },
+    {
+        "title": "Student Management System",
+        "description": "A system for managing student data and academic records efficiently.",
+        "link": "https://github.com/moeez804/student-management"
+    }
+]
