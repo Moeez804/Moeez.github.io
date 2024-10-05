@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Moeez - Ethical Hacker Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,13 +21,13 @@
         </ul>
     </nav>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <p>I am an ethical hacker with a passion for cybersecurity. My goal is to help organizations secure their systems and protect sensitive data.</p>
         <img src="your-image.jpg" alt="Abdul Moeez" />
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Skills</h2>
         <ul>
             <li>Pentesting</li>
@@ -40,14 +39,14 @@
         </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project" data-title="Project Title 1" data-description="Description of project 1." data-image="project-image1.jpg">
             <h3>Project Title 1</h3>
             <p>Description of the project, what technologies you used, and what challenges you faced.</p>
             <img src="project-image1.jpg" alt="Project Image 1" />
         </div>
-        <div class="project">
+        <div class="project" data-title="Project Title 2" data-description="Description of project 2." data-image="project-image2.jpg">
             <h3>Project Title 2</h3>
             <p>Description of the project, what technologies you used, and what challenges you faced.</p>
             <img src="project-image2.jpg" alt="Project Image 2" />
@@ -55,7 +54,7 @@
         <!-- Add more projects as needed -->
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <form id="contact-form">
             <label for="name">Name:</label>
