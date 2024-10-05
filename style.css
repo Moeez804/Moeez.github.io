@@ -1,142 +1,148 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light background for contrast */
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header Styles */
 header {
-    background: linear-gradient(to right, #343a40, #212529); /* Gradient for header */
-    position: relative;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+nav {
+    background: #444;
 }
 
-/* Navbar Styles */
-.navbar {
-    opacity: 0.9;
-}
-
-.nav-link {
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #00ff00; /* Highlight on hover */
-}
-
-/* Section Styles */
-section {
-    padding: 60px 0; /* Increased padding for spacing */
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: #00ff00; /* Accent color */
-    margin: 10px auto; /* Center the line */
-}
-
-/* About Section */
-#about p {
-    max-width: 600px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-/* Project Cards */
-.card {
-    border: none; /* Remove default border */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-}
-
-/* Skills Section */
-#skills ul {
-    list-style: none; /* Remove bullet points */
+nav ul {
+    list-style: none;
     padding: 0;
 }
 
-#skills li {
-    background: #e9ecef; /* Light background for skills */
-    margin: 10px 0; /* Margin for spacing */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Contact Form */
-.form-label {
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Navigation */
+.toggle-button {
+    display: none; /* Hide button by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+nav.active {
+    display: block; /* Show the navigation when active */
+}
+
+nav ul {
+    display: none; /* Hide menu on mobile */
+    flex-direction: column; /* Stack menu items */
+    padding: 0; /* Remove default padding */
+    transition: all 0.3s ease; /* Smooth transition for display */
+}
+
+nav.active ul {
+    display: flex; /* Show menu when active */
+    opacity: 1; /* Set opacity to 1 when shown */
+    visibility: visible; /* Make it visible */
+}
+
+nav ul {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Make it not visible */
+}
+
+nav.active ul {
+    opacity: 1; /* Set opacity to 1 when shown */
+    visibility: visible; /* Make it visible */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu on mobile */
+        flex-direction: column; /* Stack menu items */
+        padding: 0; /* Remove default padding */
+    }
+
+    nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+
+    .toggle-button {
+        display: block; /* Show the toggle button on mobile */
+    }
+    
+    nav {
+        text-align: center; /* Center navigation items */
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    border: 1px solid #ced4da; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #00ff00; /* Green border on focus */
-}
-
-/* Testimonials */
-blockquote {
-    font-size: 1.25rem;
-    color: #555; /* Darker color for quotes */
-    border-left: 4px solid #00ff00; /* Green left border */
-    padding-left: 20px; /* Padding for text */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #343a40; /* Dark footer */
-    color: white;
-    padding: 15px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px; /* Reduce padding on mobile */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Smaller font size on mobile */
-    }
-
-    h2 {
-        font-size: 1.75rem; /* Smaller font size for subheadings */
-    }
-
-    #projects .card {
-        margin-bottom: 20px; /* Spacing adjustments for smaller screens */
-    }
-    
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
