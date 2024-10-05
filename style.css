@@ -124,3 +124,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Add this in your style.css */
+html {
+    scroll-behavior: smooth;
+}
+
