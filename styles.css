@@ -1,90 +1,51 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2.5em;
-}
-
-.main-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.profile img {
-    border-radius: 50%;
-    width: 150px; /* Adjust the size as needed */
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.introduction {
-    flex: 1;
-}
-
-.introduction h2 {
-    font-size: 2em;
-    margin: 10px 0;
-}
-
-.introduction p {
-    margin: 10px 0;
-}
-
-.highlight {
-    color: #e63946; /* Example highlight color */
-    font-weight: bold;
-}
-
-.hire-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f1faee; /* Example button color */
-    color: #1d3557; /* Example text color */
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-nav {
-    text-align: center;
-    margin: 20px 0;
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav ul {
-    list-style: none;
+  list-style: none;
+  padding: 0;
 }
 
-nav li {
-    display: inline;
-    margin: 0 15px;
+nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #f1faee; /* Example link color */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline;
+section {
+  padding: 20px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.project {
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
