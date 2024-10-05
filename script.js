@@ -1,60 +1,95 @@
-// Smooth Scrolling for Navigation Links
-const links = document.querySelectorAll('nav ul li a');
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
 
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default anchor click behavior
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the target element smoothly
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     });
 });
 
-// Fade-in Effect for Sections
-const sections = document.querySelectorAll('section');
-sections.forEach(section => {
-    section.classList.add('fade-in');
+// Fetch and load project data from JSON file
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+            const projectsContainer = document.getElementById('projects');
+            data.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.classList.add('project');
+                projectElement.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank">View Project</a>
+                `;
+                projectsContainer.appendChild(projectElement);
+                
+                // Add click event to show modal
+                projectElement.addEventListener('click', () => {
+                    document.getElementById('modalTitle').innerText = project.title;
+                    document.getElementById('modalDescription').innerText = project.description;
+                    document.getElementById('modalLink').href = project.link;
+                    document.getElementById('projectModal').style.display = 'block';
+                });
+            });
+        })
+        .catch(error => console.error('Error loading projects:', error));
 });
 
-// Modal Functionality
-const projects = document.querySelectorAll('.project');
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalImage = document.getElementById('modal-image');
-const closeButton = document.querySelector('.close-button');
+// Modal functionality
+const modal = document.getElementById('projectModal');
+const closeModal = document.querySelector('.close');
 
-projects.forEach(project => {
-    project.addEventListener('click', () => {
-        modalTitle.innerText = project.getAttribute('data-title');
-        modalDescription.innerText = project.getAttribute('data-description');
-        modalImage.src = project.getAttribute('data-image');
-        modal.style.display = 'block';
-    });
-});
-
-// Close Modal
-closeButton.addEventListener('click', () => {
+closeModal.onclick = function() {
     modal.style.display = 'none';
-});
+};
 
-// Contact Form Validation
-const form = document.getElementById('contact-form');
-const formMessage = document.getElementById('form-message');
+// Close modal when clicking outside of the modal
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent default form submission
+// Enhanced form validation
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    if (name && email && message) {
-        formMessage.innerText = 'Thank you for your message!';
-        formMessage.style.color = 'green';
-        form.reset(); // Reset the form
+    // Simple email regex
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+    } else if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
     } else {
-        formMessage.innerText = 'Please fill in all fields.';
-        formMessage.style.color = 'red';
+        alert("Thank you for your message, " + name + "!");
+        this.reset(); // Clear the form
     }
 });
+
+// Scroll Animation for elements
+const elements = document.querySelectorAll('.animate-on-scroll');
+
+const scrollAnimation = () => {
+    elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            element.classList.add('visible');
+        } else {
+            element.classList.remove('visible');
+        }
+    });
+};
+
+window.addEventListener('scroll', scrollAnimation);
