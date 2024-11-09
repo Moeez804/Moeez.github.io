@@ -225,13 +225,13 @@ span {
 }
 @keyframes words{
     0%, 20%{
-        content: "Python"; 
+        content: "IT Professional"; 
     }
     21%, 60%{
         content: "C++";
     }
     61%, 80%{
-        content: "Java script";
+        content: "Ethical Hacker";
     }
     81%, 100%{
         content: "Penetration testing";
@@ -740,6 +740,104 @@ nav a.active {
     line-height: 1.5;
     color: white;
 }
+
+
+/* Header Styling */
+header {
+    background: black;
+    color: #fff;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Section Styling */
+.section {
+    padding: 4em 0;
+    text-align: center;
+    background: black
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #b74b4b;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* Skills Section */
+.skills, .why-hire {
+    margin: 2em 0;
+    padding: 1em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills ul, .why-hire ul {
+    list-style-type: none;
+}
+
+.skills ul li, .why-hire ul li {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+    color: #555;
+}
+
+.skills ul li strong, .why-hire ul li strong {
+    color: #333;
+}
+
+/* CTA Styling */
+.cta {
+    background: #333;
+    color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.cta h3 {
+    margin-bottom: 0.5em;
+}
+
+.cta p {
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 0.7em 2em;
+    background: #b74b4b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta .btn:hover {
+    background: #b74b4b;
+}
+
+/* Footer Styling */
+footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 0.9em;
+}
+
+
 
 
 
