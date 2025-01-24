@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Moeez | Experience</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Moeez</a>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav id="nav">
+            <!-- Close Button for Mobile Menu -->
+            <div class="close-btn" id="close-btn">&times;</div>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
+        const closeBtn = document.getElementById('close-btn');
+    
+        // Open the menu
+        menuToggle.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    
+        // Close the menu
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <section class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="container">
+            <div class="experience-card">
+                <h3>Senior Ethical Hacker</h3>
+                <span class="date">Jan 2024 - Present</span>
+                <span class="company">Tech Hub</span>
+                <p>
+                    Conducted comprehensive penetration tests on client networks, identifying critical vulnerabilities and providing remediation strategies. Led a team of junior ethical hackers, mentoring them on the latest attack techniques and defensive measures.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>Penetration Tester</h3>
+                <span class="date">september 2024</span>
+                <span class="company">Tech Hub.</span>
+                <p>
+                    Performed penetration testing for web applications and internal networks, identifying security weaknesses and suggesting actionable fixes. Developed scripts and tools for automating security testing tasks, improving the efficiency of the testing process.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>SEO Specialist</h3>
+                <span class="date">Jan 2022 - Nov 2023</span>
+                <span class="company">Bright Vision</span>
+                <p>
+                    Developed and executed backlinking strategies to improve domain authority and search engine rankings. Built relationships with high-quality websites for link placements, monitored backlink profiles, and provided insights to enhance link-building efforts and online visibility.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Moeez. All rights reserved.</p>
+    </footer>
+</body>
+</html>

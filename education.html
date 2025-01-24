@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Moeez | Education</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Moeez</a>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
+        <nav id="nav">
+            <!-- Close Button for Mobile Menu -->
+            <div class="close-btn" id="close-btn">&times;</div> 
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
+        const closeBtn = document.getElementById('close-btn');
+    
+        // Open the menu
+        menuToggle.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    
+        // Close the menu
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+    
+
+    <section class="section" id="education">
+        <h2 class="section-title">Educational Background</h2>
+        <div class="container">
+            <div class="education-card">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <span class="date">2023 - 2028</span>
+                <span class="institution">Superior University Faisalabad</span>
+                <p>
+                    Focused on network security, ethical hacking, and vulnerability assessments. Completed various practical projects, including simulated cyber-attacks and penetration testing labs.
+                </p>
+            </div>
+            <div class="education-card">
+                <h3>Certified Ethical Hacker (CEH)</h3>
+                <span class="date">2024</span>
+                <span class="institution">EC-Council</span>
+                <p>
+                    Gained deep knowledge of tools and techniques used by hackers and cybersecurity professionals to protect sensitive data from cyber-attacks.
+                </p>
+            </div>
+            <div class="education-card">
+                <h3>CompTIA Security+</h3>
+                <span class="date">2023</span>
+                <span class="institution">Superior University Faisalabad</span>
+                <p>
+                    Acquired strong foundational skills in IT security concepts, network security, cryptography, and risk management.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Moeez. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

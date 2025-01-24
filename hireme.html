@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Moeez | Hire Me</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">Moeez</a>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
+        <nav id="nav">
+            <!-- Close Button for Mobile Menu -->
+            <div class="close-btn" id="close-btn">&times;</div> 
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="hireme.html" class="active">Hire Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
+        const closeBtn = document.getElementById('close-btn');
+    
+        // Open the menu
+        menuToggle.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    
+        // Close the menu
+        closeBtn.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Hire Me Section -->
+    <section class="section" id="hireme">
+        <h2 class="section-title">Why Hire Me?</h2>
+        <div class="container">
+            <!-- Experience Card -->
+            <div class="experience-card">
+                <h3>Proven Expertise</h3>
+                <span class="company">Cybersecurity & Ethical Hacking</span>
+                <p>
+                    As a Senior Ethical Hacker, I have a proven record in detecting and securing vulnerabilities, applying in-depth penetration testing techniques, and mentoring a team in advanced cybersecurity tactics.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>Technical Skills</h3>
+                <span class="company">Web Development & Secure File Sharing</span>
+                <p>
+                    I specialize in building secure web applications with HTML, CSS, JavaScript, and secure file-sharing systems that utilize AES and RSA encryption. I’m dedicated to ensuring high security standards in all projects.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>Proactive Problem-Solving</h3>
+                <span class="company">Strategic & Innovative</span>
+                <p>
+                    I am constantly updating my skill set to address new challenges in cybersecurity and web development, with a focus on proactive solutions and innovative strategies that provide strong value to clients.
+                </p>
+            </div>
+
+            <!-- Call-to-Action -->
+            <div class="cta">
+                <h3>Interested in working with me?</h3>
+                <p>Let’s collaborate on a secure and high-impact project. I’m ready to bring my skills to your team.</p>
+                <a href="contact.html" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Moeez. All rights reserved.</p>
+    </footer>
+</body>
+</html>
